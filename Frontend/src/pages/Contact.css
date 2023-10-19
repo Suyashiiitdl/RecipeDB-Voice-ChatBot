@@ -1,0 +1,21 @@
+.contactStyle{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.contactStyle p{
+    font-size: 1.2rem;
+}
+.contactStyle a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: orangered;
+
+}
+.googleMap{
+    width: 80%;
+    margin-left:8rem;
+    margin-top: 2rem;
+    height: 20rem;
+
+}

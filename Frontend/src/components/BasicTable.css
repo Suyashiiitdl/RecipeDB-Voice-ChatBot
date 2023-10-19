@@ -1,0 +1,91 @@
+.tablestyle {
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 5%;
+    margin-left: 2rem;
+    text-align: center;
+
+  }
+  .recipe_title_color{
+    color : #039be5
+    
+  }
+  .tablestyle td, #tablestyle th {
+    border: 0.1rem solid rgb(176, 176, 176);
+    padding: 0.5rem;
+  }
+  
+  .tablestyle tr:nth-child(even){background-color: #f2f2f2;}
+  
+  
+  .tablestyle th {
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(12, 118, 86);
+    color: white;
+  }
+  .pagenation{
+    font-size: 1rem;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .buttonstyle1{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5%;
+  }
+  .buttonstyle1:enabled{
+    background-color:rgb(63, 199, 174);
+    border : rgb(63, 199, 174);
+    color: white;
+  }
+  @media(max-width : 820px){
+    .marginForSpinner{
+        left: 44%;
+    }
+}
+@media(max-width : 600px){
+  .marginForSpinner{
+      left: 43%;
+  }
+  .tablestyle{
+    font-size: 3.3rem;
+    width: 91%;
+    margin-top: 7%;
+    margin-left: 5%;
+  }
+  thead{
+    font-size: 4rem;
+  }
+  .pagenation{
+    font-size: 3rem;
+    margin-top: 4%;
+  }
+  .pagenation button{
+    font-size: 3rem;
+  }
+}
+@media(min-width : 381px) and (max-width:395px){
+  .tablestyle{
+    margin-left: 3%;
+  }
+}
+@media(max-width : 480px){
+  .marginForSpinner{
+      left: 42%;
+  }
+}
+@media(max-width : 440px){
+  .marginForSpinner{
+      left: 41%;
+  }
+}
+@media(max-width : 380px){
+  .marginForSpinner{
+      left: 40%;
+  }
+}
