@@ -38,9 +38,9 @@ const  Header = (props) =>{
     <nav className='headerStyles'>
        
         <ul>
-            <img src = {require('./RecipeDBLogo.png')} ></img>
+            <img src = {require('./RecipeDBLogoRed.png')} ></img>
             {/* <p>RecipeDB </p> */}
-            <p>RecipeDB</p>
+           <p> RecipeDB</p>
             <button className="hamburger" onClick={handleHamburger} onMouseOut={()=>
             {if(document.querySelector(".main")!=null){
             document.querySelector(".main").style.filter="none"}

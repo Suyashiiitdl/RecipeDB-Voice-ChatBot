@@ -87,8 +87,15 @@
     text-align: center;
     font-family: 'YourFont', sans-serif; /* Apply the custom font to the heading */
     font-size: 2rem;
-    color: #027800; /* Set the text color as needed */
+    color:rgb(0, 91, 44); /* Set the text color as needed */
   }
+
+/* .recipe-logo{
+    float: left;
+    height: 1%;
+    width: 1%;
+    margin-top: 0.3rem;
+} */
 .rounded-button {
   background-color: #007bff; /* Background color of the button */
   color: #fff; /* Text color */
@@ -116,6 +123,7 @@
   /* Margin */
   margin-top: 4rem;
   margin-left: 16.5%;
+  margin-bottom: 9rem;
 }
 .rounded-button2{
   background-color: #007bff; /* Background color of the button */
@@ -188,6 +196,7 @@
     resize:none ;
     padding: 0.5rem;
     border-radius:25px; /* Add rounded corners */
+    /* overflow: hidden; */
   }
 
   .helpStyle{
