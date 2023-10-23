@@ -5,13 +5,52 @@ import axios from 'axios'
 import {  ColorRing } from 'react-loader-spinner'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { useNavigate } from 'react-router-dom';
 const RecipeList = (props)  => {
 
     const [isFirstTime, setFirstTime] = useState(false);
     const userTranscript = localStorage.getItem('userTranscript')
+    const {
+      transcript,
+      listening,
+      browserSupportsSpeechRecognition,
+      isMicrophoneAvailable
+  } = useSpeechRecognition();
+  const navigate = useNavigate();
+  const [user1Transcript, setUser1Transcipt]  = useState("");    
+  useEffect(()=>{
+      setUser1Transcipt(transcript)
+  },[transcript])
+
+  if (!browserSupportsSpeechRecognition || !isMicrophoneAvailable) {
+      return <span>Browser doesn't support speech recognition.</span>;
+  }
+
+  function handleChange(event){
+      setUser1Transcipt(event.target.value)
+  }
+
+
+
+  function resetTranscript(){
+      SpeechRecognition.stopListening()
+      setUser1Transcipt("");
+  }
+
+
+  function handleSubmit(event){
+      console.log("user wants to say : ",user1Transcript)
+      if(userTranscript.trim().length > 0){
+          // navigate('./')
+          localStorage.setItem('userTranscript',userTranscript);
+      }
+      setUser1Transcipt("")
+      
+  }
 
     useEffect(()=>{
-        if(!isFirstTime ){
+        if(!isFirstTime){
             axios({
                 method :"GET",
                 // url : `https://cosylab.iiitd.edu.in/recipe-voice-bot-backend/api/findRecipeByText/` + userTranscript
@@ -94,6 +133,19 @@ const RecipeList = (props)  => {
 
     return (<div>
               <Header></Header>
+              <h2 className='left-margin'>{listening ? 'Listening...' : ''}</h2>
+                
+                <form onSubmit={handleSubmit} className='centerdiv'>
+                    <label >
+                    <textarea type="text" value={user1Transcript} onChange={handleChange} onRateChange ={handleSubmit} placeholder="Click SPEAK Button to ask queries to RecipeDB..." className='textareastyleRL'/>
+                    </label>
+                </form>
+                
+                <button className='rounded-buttonrl' onClick={SpeechRecognition.startListening}>SPEAK</button>
+                <button className='rounded-buttonrl1' onClick={resetTranscript}>CLEAR</button>
+
+                
+                <button className='rounded-buttonrl2' onClick= {handleSubmit} >SUBMIT</button> 
                 {response}
             </div>)
 }

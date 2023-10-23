@@ -1,3 +1,73 @@
+.textareastyleRL{
+  margin-top: 3rem;
+  margin-left: 58rem;
+  text-align: center;
+  font-size: 2 rem;
+  background-color: transparent;
+  border: 1px solid #000; /* Add a plain black border */
+  width: 30%;
+  height : 1.8rem;
+  resize:none ;
+  padding: 0.5rem;
+  border-radius:39px;
+}
+
+.rounded-buttonrl{
+  background-color: #007bff; 
+  color: #fff; 
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 25px; /* Border radius to make corners rounded */
+  cursor: pointer; /* Change cursor to a hand when hovering */
+  font-size: 12px;
+  /* Hover state */
+  transition: background-color 0.5s;
+  margin-top :  1rem;
+  margin-left:  5%;
+
+}
+.rounded-buttonrl1{
+  background-color: #007bff; /* Background color of the button */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 25px; /* Border radius to make corners rounded */
+  cursor: pointer; /* Change cursor to a hand when hovering */
+  font-size: 12px;
+  /* Hover state */
+  transition: background-color 0.5s; 
+  margin-top :  1rem;
+  margin-left:  15%;
+}
+.rounded-buttonrl2{
+  background-color: #007bff; /* Background color of the button */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 25px; /* Border radius to make corners rounded */
+  cursor: pointer; /* Change cursor to a hand when hovering */
+  font-size: 12px;
+  /* Hover state */
+  transition: background-color 0.5s; 
+  margin-top :  1rem;
+  margin-left:  5%;
+
+}
+.rounded-buttonrl{
+  margin-top :  1rem;
+  margin-left:  65%;
+
+}
+.rounded-buttonrl1{
+  margin-top :  1rem;
+  margin-left:  2%;
+}
+
+.rounded-buttonrl2{
+  margin-top :  1rem;
+  margin-left:  2%; 
+
+} 
 
 .marginForSpinner{
   left: 47%; 

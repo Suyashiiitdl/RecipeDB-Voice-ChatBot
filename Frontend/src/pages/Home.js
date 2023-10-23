@@ -111,7 +111,7 @@ const Home = (props) =>{
         <div>
             <Header></Header>
             <div className='main'>
-                <hr className='tophr' style={{width:'90%',marginTop:'2.5%',borderTop: '1px solid black'}}></hr>
+                {/* <hr className='tophr' style={{width:'90%',marginTop:'2.5%',borderTop: '1px solid black'}}></hr> */}
                 <p className='helpStyle'><span className='ask'>Ask for Recipes by</span> 
                 <span>
                 <a className='dropdown' id='a1' onClick={changeDisplay} style={{textDecoration:'None',color:'black'}}>&nbsp;&nbsp; &nbsp; &nbsp; Cuisine(Country) <FontAwesomeIcon onClick={changeDisplay} className='fa' icon={faCaretDown} ></FontAwesomeIcon><div class="dropdown-content">
@@ -160,14 +160,25 @@ const Home = (props) =>{
                     </a>
                 </span>
                 </p>
-                <hr style={{width:'90%',borderTop: '1px solid black'}}></hr>
+                {/* <hr style={{width:'90%',borderTop: '1px solid black'}}></hr> */}
 
                 {/* <button className='buttonstyle buttonmargin1' onClick={SpeechRecognition.startListening}>SPEAK</button>
                 <button className='buttonstyle buttonmargin1' onClick={resetTranscript}>CLEAR</button> */}
                 
                 {/* <div className="recipe-logo"></div><img src = {require('./RecipeDBLogoText.png')} ></img> */}
-              
-                <div className="chatbot-heading"><h2>Voice ChatBot</h2>    </div>
+                
+                {/* <div className='image-text-container'> <div className="chatbot-heading"><h2>Voice ChatBot</h2> </div> <img src = {require('./RecipeDBLogoText.png')} alt="Your Image" className="custom-image"></img></div> */}
+                <div className="image-and-text-container">
+      <img
+        src={require('./RecipeDBLogoRed.png')}
+        alt="Your Image"
+        className="custom-image"
+      />
+      <p className="chatbot-heading">
+        <h2>Voice ChatBot</h2>
+      </p>
+    </div>
+                
                 <h2 className='left-margin'>{listening ? 'Listening...' : ''}</h2>
                 
                 <form onSubmit={handleSubmit} className='centerdiv'>
