@@ -4,7 +4,7 @@ const  Footer = (props) =>{
     return (
         <div className='footerStyle'>
             <p><img alt="" src="https://cosylab.iiitd.edu.in/recipedb/static/iiitd.png"/></p>
-            <p className='copyright'>Copyright © 2022 &nbsp; All rights reserved.</p>
+            <p className='copyright'>Copyright © 2023 &nbsp; All rights reserved.</p>
             <br></br>
             <a  href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
                 <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"/>

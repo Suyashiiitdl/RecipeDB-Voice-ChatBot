@@ -1,6 +1,6 @@
 .textareastyleRL{
   margin-top: 3rem;
-  margin-left: 58rem;
+  margin-left: 53rem;
   text-align: center;
   font-size: 2 rem;
   background-color: transparent;
@@ -55,7 +55,7 @@
 }
 .rounded-buttonrl{
   margin-top :  1rem;
-  margin-left:  65%;
+  margin-left:  70%;
 
 }
 .rounded-buttonrl1{
@@ -74,7 +74,9 @@
   position: absolute; 
   text-align: center; 
   top: 37%; 
+  cursor: pointer;
 }
+
 .footer-in-recipeList{
   position: absolute !important;
 }

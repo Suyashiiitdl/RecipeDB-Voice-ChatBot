@@ -5,6 +5,9 @@ import './Header.css';
 const  Header = (props) =>{
     const [isNavExpanded, setIsNavExpanded] = useState(false)
 
+    const handleLogoClick =()=>{
+        window.open('/recipe-voice-bot/')
+    }
     const handleCoSyClick =()=>{
         window.open('https://cosylab.iiitd.edu.in/')
     }
@@ -38,9 +41,10 @@ const  Header = (props) =>{
     <nav className='headerStyles'>
        
         <ul>
-            <img src = {require('./RecipeDBLogoRed.png')} ></img>
+            <img src = {require('./RecipeDBLogoRed.png')} onClick={handleHomeClick} className='headerlogo'></img>
             {/* <p>RecipeDB </p> */}
-           <p> RecipeDB</p>
+           <p onClick={ handleHomeClick} className='headertitle'> RecipeDB </p>
+           
             <button className="hamburger" onClick={handleHamburger} onMouseOut={()=>
             {if(document.querySelector(".main")!=null){
             document.querySelector(".main").style.filter="none"}

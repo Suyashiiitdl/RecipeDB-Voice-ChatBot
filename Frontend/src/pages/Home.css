@@ -6,22 +6,23 @@
 
 .dropdown-content {
   display: none;
-  cursor: text;
+  /* cursor: text; */
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160%;
+  min-width: 200%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
   margin-left: auto;
+  cursor: pointer;
   z-index: 10;
-  font-size: 16px;
+  font-size: medium;
 }
 .dropdown-content2 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 240%;
+  min-width: 350%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
   margin-left: auto;
@@ -30,10 +31,10 @@
 }
 .dropdown-content3 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 200%;
+  min-width: 180%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
   margin-left: -107%;
@@ -42,25 +43,25 @@
 }
 .dropdown-content4 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 200%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
-  margin-left: -107%;
+  margin-left: 5%;
   z-index: 10;
   font-size: 16px;
 }
 .dropdown-content5 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 200%;
+  min-width: 300%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
-  margin-left: -143;
+  margin-left: -100%;
   /* z-index: 10; */
   font-size: 16px;
 }
@@ -87,21 +88,23 @@
     display: flex;
     align-items: center;
   }
-  
+.selected{
+  color:  red;
+  }
   .custom-image {
     width: 150px;
     height: 135px;
-    margin-left: 33%; /* Change to 10px for spacing */
-    margin-top: 1%;
+    margin-left: 33%; 
+    margin-top: 5rem;
   }
   
   .chatbot-heading {
     /* text-align: ; */
     font-family: 'YourFont', Copperplate; 
     font-size: 2rem;
-    margin-top: 2rem;
+    margin-top: 9rem;
     margin-left: 2%;
-     /* Change to 10px for spacing */
+  
     color: rgb(0, 91, 44); 
   }
 
@@ -112,43 +115,42 @@
     margin-top: 0.3rem;
 } */
 .rounded-button {
-  background-color: #007bff; /* Background color of the button */
-  color: #fff; /* Text color */
-  padding: 10px 20px; /* Padding inside the button */
+  background-color: #007bff; 
+  color: #fff; 
+  padding: 10px 20px; 
   border: none; /* No border */
-  border-radius: 20px; /* Border radius to make corners rounded */
-  cursor: pointer; /* Change cursor to a hand when hovering */
+  border-radius: 20px; 
+  cursor: pointer; 
   font-size: 25px;
-  /* Hover state */
-  transition: background-color 0.5s; /* Smooth transition */
-  /* Margin */
+  
+  transition: background-color 0.2s; 
+ 
   margin-top: 4rem;
   margin-left: 20%;
 }
 .rounded-button1{
-  background-color: #007bff;/* Background color of the button */
-  color: #fff; /* Text color */
-  padding: 10px 20px; /* Padding inside the button */
-  border: none; /* No border */
-  border-radius: 20px; /* Border radius to make corners rounded */
-  cursor: pointer; /* Change cursor to a hand when hovering */
+  background-color: #007bff;
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
   font-size: 25px;
-  /* Hover state */
-  transition: background-color 0.5s; /* Smooth transition */
-  /* Margin */
+  
+  transition: background-color 0.2s;
+  
   margin-bottom: 3rem;
 }
 .rounded-button2{
-  background-color: #007bff; /* Background color of the button */
-  color: #fff; /* Text color */
-  padding: 10px 20px; /* Padding inside the button */
-  border: none; /* No border */
-  border-radius: 20px; /* Border radius to make corners rounded */
-  cursor: pointer; /* Change cursor to a hand when hovering */
+  background-color: #007bff; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
   font-size: 25px;
-  /* Hover state */
-  transition: background-color 0.5s; /* Smooth transition */
-  /* Margin */
+  
+  transition: background-color 0.2s; /* Smooth transition */
   
 }
 
@@ -235,7 +237,7 @@
       font-size: 90%;
     }
     .textareastyle{
-      height:40rem;
+      height: 40px;
     }
   }
 
@@ -244,7 +246,7 @@
       font-size: 65%;
     }
     .textareastyle{
-      height:40rem;
+      height:50px;
     }
   }
   @media(max-width : 820px){
@@ -256,6 +258,43 @@
   @media(max-width : 768px){
     html{
       font-size: 50%;
+    }
+    #a2{
+      font-size: 24px;
+    }
+    #a3{
+      font-size: 24px;
+    }
+    #a4{
+      font-size: 24px;
+    }
+    #a5{
+      font-size: 24px;
+    }
+    #a1{
+      font-size: 24px;
+    }
+    .custom-image {
+      width: 126px;
+      height: 125px;
+      margin-left: 19%; 
+      margin-top: 5rem;
+    }
+    .chatbot-heading {
+      /* text-align: ; */
+      font-family: 'YourFont', Copperplate; 
+      font-size: 4.1rem;
+      margin-top: 9rem;
+      margin-left: 2%;
+    
+      color: rgb(0, 91, 44); 
+    }
+    .textareastyle{
+      height: 45px;
+      font-size: 3.5rem;
+    }
+    .rounded-button{
+      margin-left: 18%;
     }
   }
   @media(max-width : 620px){/**/
@@ -273,15 +312,7 @@
     .helpStyle{
       font-size: 372%;
     }
-    .buttonstyle{
-      font-size: 7rem;
-      padding: 3%;
-      margin-top: 7rem;
-      margin-left: 12%;
-    }
-    .buttonmargin2{
-      margin-left: 31%;
-    }
+ */
     .centerdiv{
       margin-top: 6%;
     }
@@ -311,21 +342,80 @@
       margin-left: -94%;
     }
     .textareastyle{
-      height:58rem;
-      font-size: 6rem;
+      height: 45px;
+      font-size: 3.5rem;
     }
+    .custom-image {
+      width: 120px;
+      height: 115px;
+      margin-left: 16%; 
+      margin-top: 5rem;
+    }
+    .chatbot-heading {
+
+      font-family: 'YourFont', Copperplate; 
+      font-size: 4.1rem;
+      margin-top: 9rem;
+      margin-left: 2%;
+    
+      color: rgb(0, 91, 44); 
+    }
+    .rounded-button {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 18px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 13%;
+    }
+    .rounded-button1 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 18px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 8%;
+    }
+    .rounded-button2 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 18px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 8%;
+    }
+
     #a1{
       margin-top: 6%;
       margin-right: 5%;
+      
+    }
+    #a2{
+      margin-top: 6%;
+      margin-right: 5%;
+      
     }
 
     #a3{
       display: block;
       margin-left: 5%;
-      margin-top: 5%;
+      margin-top: 0%;
       margin-bottom: 7%;
     }
     #a4{
+      margin-top: 0%;
       margin-left: -12%;
       margin-right: 7%;
     }
@@ -339,17 +429,122 @@
   }
   @media(max-width : 480px){
     html{
-      font-size: 30%;
+      font-size: 50%;
+    }
+    #a1{
+      margin-top: 0;
+      margin-bottom: 1%;
+      margin-left: 1%;
+    }
+    #a2{
+      margin-top: 0;
+      margin-bottom: 1%;
+      margin-left: 1%;
+    }
+    #a3{
+      margin-top: 0;
+      margin-bottom: 1%;
+      margin-left: 1%;
+    }
+    #a4{
+      margin-top: 0;
+      margin-bottom:1%;
+      margin-left: 1%;
+    }
+    #a5{
+      margin-top: 0;
+      margin-bottom: 1%;
+      margin-left: 1%;
+    }
+    .dropdown-content{
+      min-width: 112%;
+      margin-left: 0%;
+    }
+    .dropdown-content2{
+      min-width: 206%;
+      margin-left: -90%;
+    }
+    .dropdown-content3{
+      min-width: 85%;
+      margin-left: -8%;
+    }
+    .dropdown-content4{
+      min-width: 206%;
+      margin-left: -90%;
+    }
+    
+    .dropdown-content5{
+      min-width: 249%;
+      margin-left: -94%;
+    }
+
+    .custom-image {
+      width: 110px;
+      height: 111px;
+      margin-left: 14%; 
+      margin-top: 5rem;
+    }
+    .chatbot-heading {
+      /* text-align: ; */
+      font-family: 'YourFont', Copperplate; 
+      font-size: 5rem;
+      margin-top: 9rem;
+      margin-left: 2%;
+    
+      color: rgb(0, 91, 44); 
+    }
+
+    .textareastyle{
+      height: 10rem;
+      font-size: 4.5rem;
     }
     .helpStyle{
       font-size: 420%;
     }
+    .rounded-button {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 13px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 10%;
+    }
+    .rounded-button1 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 13px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 10%;
+    }
+    .rounded-button2 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 13px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 10%;
+    }
+
   }
   @media(max-width : 408px){
     #a3{
       margin-top: 0;
       margin-bottom: 8%;
     }
+
   }
   @media(max-width : 380px){
     html{
@@ -362,10 +557,129 @@
       margin-top: 5%;
       margin-bottom: 7%;
     }
+
+    .custom-image {
+      width: 100px;
+      height: 95px;
+      margin-left: 11%; 
+      margin-top: 5rem;
+    }
+    .chatbot-heading {
+      /* text-align: ; */
+      font-family: 'YourFont', Copperplate; 
+      font-size: 5rem;
+      margin-top: 9rem;
+      margin-left: 2%;
+    
+      color: rgb(0, 91, 44); 
+    }
+
+    .textareastyle{
+      height: 9rem;
+      font-size: 4rem;
+    }
+    .helpStyle{
+      font-size: 420%;
+    }
+    .rounded-button {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 11px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 10%;
+    }
+    .rounded-button1 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 11px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 7%;
+    }
+    .rounded-button2 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 11px;
+      
+      transition: background-color 0.2s; 
+  
+      margin-top: 4rem;
+      margin-left: 7%;
+    }
   }
   @media(max-width : 280px){
     html{
       font-size: 20%;
+    }
+    .custom-image {
+      width: 100px;
+      height: 115px;
+      margin-left: 16%; 
+      margin-top: 5rem;
+    }
+    .chatbot-heading {
+      /* text-align: ; */
+      font-family: 'YourFont', Copperplate; 
+      font-size: 5rem;
+      margin-top: 9rem;
+      margin-left: 2%;
+    
+      color: rgb(0, 91, 44); 
+    }
+
+    .textareastyle{
+      height: 10rem;
+      font-size: 4.5rem;
+    }
+    .helpStyle{
+      font-size: 420%;
+    }
+    .rounded-button {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 13px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 10%;
+    }
+    .rounded-button1 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 13px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 10%;
+    }
+    .rounded-button2 {
+      padding: 10px 20px; 
+      border: none; /* No border */
+      border-radius: 20px; 
+      cursor: pointer; 
+      font-size: 13px;
+      
+      transition: background-color 0.2s; 
+     
+      margin-top: 4rem;
+      margin-left: 10%;
     }
     
   }

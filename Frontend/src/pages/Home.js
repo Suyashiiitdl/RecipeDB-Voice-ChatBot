@@ -50,6 +50,11 @@ const Home = (props) =>{
         }
     }
 
+    // input.addEventListener("keypress", function (event) {
+    //     if (event.keyCode == 13) {
+    //        // enter pressed
+    //     }
+    //  });
 
     function handleSubmit(event){
         console.log("user wants to say : ",userTranscript)
@@ -60,6 +65,9 @@ const Home = (props) =>{
         setUserTranscipt("")
         
     }
+
+
+    const [selectedItem, setSelectedItem]= useState('');
 
     function resetTranscript(){
         SpeechRecognition.stopListening()
@@ -77,36 +85,14 @@ const Home = (props) =>{
         
     }
     function handleDropdownClick(text){ // this function is used to set the transcript to the text of the dropdown  
+        
         setUserTranscipt(text)
+        setDropDownExpanded("block");
+        setSelectedItem(text);
+
     }
     
     return (
-        // <div>
-        //     <Header></Header>
-        //     <div>
-        //         {/* <img className = 'img_dat'>acac</img> */}
-        //         <div class="fact-box">
-        //             <h2>RecipeDB is a well-organized collection of recipes and ingredients sourced from more than 22 global regions. Its primary aim is to enable systematic and data-oriented investigations of various recipes. By incorporating flavor molecules information from FlavorDB, RecipeDB allows for in-depth examination of traditional recipes at different levels, such as dietary classifications, ingredient compositions, nutritional value, and cooking methods.</h2>
-        //             <p class="fact"></p>
-        //         </div>
-
-        //         <button className='buttonstyle buttonmargin1' onClick={SpeechRecognition.startListening}>SPEAK</button>
-        //         <button className='buttonstyle buttonmargin1' onClick={resetTranscript}>CLEAR</button>
-
-        //         <h2 className='left-margin'>{listening ? 'Listening...' : ''}</h2>
-                
-        //         <form onSubmit={handleSubmit} className='centerdiv'>
-        //             <label >
-        //             <textarea type="text" value={userTranscript} onChange={handleChange} placeholder="Click SPEAK Button to speak something...
-        //             ask for Recipes by Cuisine(Country), Ingredients(its Category), Cooking Process and Utensils" className='textareastyle'/>
-        //             </label>
-        //         </form>
-
-        //         <button className='buttonstyle buttonmargin2' onClick={handleSubmit}>SUBMIT</button> 
-        //     </div>
-       
-        // </div>
-
 
         <div>
             <Header></Header>
@@ -115,47 +101,45 @@ const Home = (props) =>{
                 <p className='helpStyle'><span className='ask'>Ask for Recipes by</span> 
                 <span>
                 <a className='dropdown' id='a1' onClick={changeDisplay} style={{textDecoration:'None',color:'black'}}>&nbsp;&nbsp; &nbsp; &nbsp; Cuisine(Country) <FontAwesomeIcon onClick={changeDisplay} className='fa' icon={faCaretDown} ></FontAwesomeIcon><div class="dropdown-content">
-                
-                    <p onClick={() => handleDropdownClick("Show me Indian recipes.")}>Show me Indian recipes.</p>
-                    <p onClick={() => handleDropdownClick("Could you suggest Thai recipes for me to prepare at home?")}>Could you suggest Thai recipes for me to prepare at home?</p>
-                    <p onClick={() => handleDropdownClick("Recommend some indigenous Korean  recipes")}>Recommend some indigenous Korean  recipes</p>
-                    <p onClick={() => handleDropdownClick("Give a list of some Australian recipes")}>Give a list of some Australian recipes</p>
-                    <p onClick={() => handleDropdownClick("Show me some Belgian dishes involving Chocolate.")}>Show me some Belgian dishes involving Chocolate.</p>
+                    <p className={selectedItem === "Show me Indian recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Show me Indian recipes.")}>Show me Indian recipes.</p>
+                    <p className={selectedItem === "Suggest Thai recipes for me to prepare at home?" ? "selected" : ""} onClick={() => handleDropdownClick("Suggest Thai recipes for me to prepare at home?")}>Suggest Thai recipes for me to prepare at home?</p>
+                    <p className={selectedItem === "Recommend some indigenous Korean  recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Recommend some indigenous Korean  recipes")}>Recommend some indigenous Korean  recipes</p>
+                    <p className={selectedItem === "Give a list of some Australian recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Give a list of some Australian recipes")}>Give a list of some Australian recipes</p>
+                    <p className={selectedItem === "Show me some Belgian dishes involving Chocolate." ? "selected" : ""} onClick={() => handleDropdownClick("Show me some Belgian dishes involving Chocolate.")}>Show me some Belgian dishes involving Chocolate.</p>
                 </div></a>
                 &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a2' onClick={changeDisplay} style={{textDecoration:'None',color:'black'}}> Ingredients <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
                     <div class="dropdown-content2">
                     
-                    <p onClick={() => handleDropdownClick("Recommend dishes with chicken, broccoli, and garlic for tonight's dinner.")}>Recommend dishes with chicken, broccoli, and garlic for tonight's dinner.</p>
-                    <p onClick={() => handleDropdownClick("Show me some French recipes involving Cheese")}>Show me some French recipes involving Cheese</p>
-                    <p onClick={() => handleDropdownClick("Provide Italian recipes that have wine as one the ingredients")}>Provide Italian recipes that have wine as one the ingredients</p>
-                    <p onClick={() => handleDropdownClick("Show me a diet having almonds and eggs")}>Show me a diet having almonds and eggs</p>
-                    <p onClick={() => handleDropdownClick("Show some desserts to make at home from sugar, milk, egg")}>Show some desserts to make at home from sugar, milk, egg</p>
+                    <p className={selectedItem === "Recommend dishes with chicken, broccoli, and garlic for tonight's dinner." ? "selected" : ""} onClick={() => handleDropdownClick("Recommend dishes with chicken, broccoli, and garlic for tonight's dinner.")}>Recommend dishes with chicken, broccoli, and garlic for tonight's dinner.</p>
+                    <p className={selectedItem === "Show me some French recipes involving Cheese" ? "selected" : ""} onClick={() => handleDropdownClick("Show me some French recipes involving Cheese")}>Show me some French recipes involving Cheese</p>
+                    <p className={selectedItem === "Provide Italian recipes that have wine as one the ingredients" ? "selected" : ""} onClick={() => handleDropdownClick("Provide Italian recipes that have wine as one the ingredients")}>Provide Italian recipes that have wine as one the ingredients</p>
+                    <p className={selectedItem === "Show me a diet having chicken" ? "selected" : ""} onClick={() => handleDropdownClick("Show me a diet having chicken")}>Show me a diet having chicken</p>
+                    <p className={selectedItem === "Show some desserts to make at home from cream" ? "selected" : ""} onClick={() => handleDropdownClick("Show some desserts to make at home from cream")}>Show some desserts to make at home from cream</p>
                 </div>
                 </a>
                 &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a3' onClick={changeDisplay} style={{textDecoration:'None',color:'black'}}> Ingredient Category <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon> 
                     <div className='dropdown-content3'>
-                        <p onClick={() => handleDropdownClick("Show vegetable and fruit salad recipes for a healthy meal choice.")}>Show vegetable and fruit salad recipes for a healthy meal choice.</p>
-                        <p onClick={() => handleDropdownClick("Suggest legume-based recipes for a nutritious and satisfying meal, please")}>Suggest legume-based recipes for a nutritious and satisfying meal, please</p>
-                        <p onClick={() => handleDropdownClick("Show seafood recipes for a delectable ocean-inspired dining experience.")}>Show seafood recipes for a delectable ocean-inspired dining experience.</p>
-                        <p onClick={() => handleDropdownClick("Recommend bakery-style recipes.")}>Recommend bakery-style recipes.</p>
-                        <p onClick={() => handleDropdownClick("Suggest berry-infused recipes.")}>Suggest berry-infused recipes.</p>
+                        <p className={selectedItem === "Show vegetable and fruit recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Show vegetable and fruit recipes")}>Show vegetable and fruit recipes.</p>
+                        <p className={selectedItem === "Suggest chicken based recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Suggest chicken based recipes")}>Suggest chicken based recipes</p>
+                        <p className={selectedItem === "Show seafood recipes for a delectable ocean-inspired dining experience." ? "selected" : ""} onClick={() => handleDropdownClick("Show seafood recipes for a delectable ocean-inspired dining experience.")}>Show seafood recipes for a delectable ocean-inspired dining experience.</p>
+                        <p className={selectedItem === "Recommend bakery style recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Recommend bakery style recipes.")}>Recommend bakery style recipes.</p>
+                        <p className={selectedItem === "Suggest berry infused recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Suggest berry infused recipes.")}>Suggest berry infused recipes.</p>
                     </div>
                     </a>
                 &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a4' onClick={changeDisplay} style={{textDecoration:'None',color:'black'}}> Cooking Process <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
                     <div className="dropdown-content4">
-                        <p onClick={() => handleDropdownClick("Can you recommend some dishes for lunch which do not require refrigeration.")}>Can you recommend some dishes for lunch which do not require refrigeration.</p>
-                        <p onClick={() => handleDropdownClick("Show me recipes using drain method")}>Show me recipes using drain method</p>
-                        <p onClick={() => handleDropdownClick("Could you give dishes which involve seasoning with cilantro and lime")}>Could you give dishes which involve seasoning with cilantro and lime</p>
+                        {/* <p className={selectedItem === "Can you recommend some dishes for lunch which do not require refrigeration." ? "selected" : ""} onClick={() => handleDropdownClick("Can you recommend some dishes for lunch which do not require refrigeration.")}>Can you recommend some dishes for lunch which do not require refrigeration.</p> */}
+                        <p className={selectedItem === "Show me recipes using drain method" ? "selected" : ""} onClick={() => handleDropdownClick("Show me recipes using drain method")}>Show me recipes using drain method</p>
+                        <p className={selectedItem === "Could you give dishes which involve seasoning with cilantro and lime" ? "selected" : ""} onClick={() => handleDropdownClick("Could you give dishes which involve seasoning with cilantro and lime")}>Could you give dishes which involve seasoning with cilantro and lime</p>
                         
                     </div>
                     </a>
                 
                 &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a5' onClick={changeDisplay} style={{textDecoration:'None',color:'black'}}>  Utensils <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
                     <div className='dropdown-content5'>
-                        <p>Examples:</p>
-                        <p onClick={() => handleDropdownClick("Can you give me some recipes which require cooking in a microwave?")}>Can you give me some recipes which require cooking in a microwave?</p>
-                        <p onClick={() => handleDropdownClick("Show me some recipes which don't need a oven.")}>Show me some recipes which don't need a oven</p>
-                        <p onClick={() => handleDropdownClick("Can you recommend some recipes which don't need refrigeration")}>Can you recommend some recipes which don't need refrigeration</p>
+                        <p className={selectedItem === "Can you give me some recipes which require cooking in a microwave?" ? "selected" : ""} onClick={() => handleDropdownClick("Can you give me some recipes which require cooking in a microwave?")}>Can you give me some recipes which require cooking in a microwave?</p>
+                        <p className={selectedItem === "Show me some recipes which don't need a oven." ? "selected" : ""} onClick={() => handleDropdownClick("Show me some recipes which don't need a oven.")}>Show me some recipes which don't need a oven</p>
+                        <p className={selectedItem === "Can you recommend some recipes which don't need refrigeration" ? "selected" : ""} onClick={() => handleDropdownClick("Can you recommend some recipes which don't need refrigeration")}>Can you recommend some recipes which don't need refrigeration</p>
                     </div>
                     </a>
                 </span>
@@ -183,7 +167,7 @@ const Home = (props) =>{
                 
                 <form onSubmit={handleSubmit} className='centerdiv'>
                     <label >
-                    <textarea type="text" value={userTranscript} onChange={handleChange} onRateChange ={handleSubmit} placeholder="Click SPEAK Button to ask queries to RecipeDB..." className='textareastyle'/>
+                    <textarea type="text" value={userTranscript} onChange={handleChange}  onRateChange ={handleSubmit} onKeyPress={(event) => {if (event.key === 'Enter') {handleSubmit(event);}}}placeholder="Click SPEAK Button to ask queries to RecipeDB..." className='textareastyle'/>
                     </label>
                 </form>
                 

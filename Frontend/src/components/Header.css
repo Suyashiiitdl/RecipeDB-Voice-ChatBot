@@ -8,6 +8,13 @@
     padding-top: 1%;
     padding-bottom: 2%;
 }
+.headerlogo {
+    cursor: pointer;
+}
+
+.headertitle{
+    cursor: pointer;
+}
 
 .headerStyles li{
     float: right;
